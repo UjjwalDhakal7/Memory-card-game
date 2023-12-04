@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Nabla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/reset.css">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <section class="top">
+        <span class="heading" id="heading">Memory Card Game</span>
+    </section>
+    <section class="startgame" id="startgame">
+        <button class="start" id="#main" onclick="refergame()">Start Game !</button>
+    </section>
+    
+    <section class="main" id="main">
+        <div class="view">
+            <div class="view-1">
+                <div class="views">
+                    <span class="level">Easy</span>
+                    <label class="middle switch">
+                        <input type="checkbox" id="viewToggle" onclick="gameLevel()">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="level">Hard</span>
+                </div>
+                <span class="turns">TURNS: 0</span>
+            </div>
+            <div class="view-2">
+                <button class="btn" onclick="restart()">Play Again!</button>
+            <button id="exit"  onclick="exitGame()">Reset</button>
+            </div>
+
+        </div>
+
+         <!--EASY-->
+            <div class="wrapperEasy" id="#memory-card-wrapper-easy">
+                <div class="memory-card" data-framework="howard">
+                    <img class="front-face" src="assets/howardd.jpeg" alt="howard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="howard">
+                    <img class="front-face" src="assets/howardd.jpeg" alt="howard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="sheldon">
+                    <img class="front-face" src="assets/sheldonn.jpeg" alt="sheldon">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="sheldon">
+                    <img class="front-face" src="assets/sheldonn.jpeg" alt="sheldon">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="leonard">
+                    <img class="front-face" src="assets/leonardd.jpeg" alt="leonard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="leonard">
+                    <img class="front-face" src="assets/leonardd.jpeg" alt="leonard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="raj">
+                    <img class="front-face" src="assets/rajj.jpeg" alt="raj">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="raj">
+                    <img class="front-face" src="assets/rajj.jpeg" alt="raj">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="penny">
+                    <img class="front-face" src="assets/pennyy.jpeg" alt="penny">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="penny">
+                    <img class="front-face" src="assets/pennyy.jpeg" alt="penny">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                
+            </div><br><br>
+        <!--Hard-->
+            <div class="wrapperHard" id="#memory-card-wrapper-hard">
+                <div class="memory-card" data-framework="howard">
+                    <img class="front-face" src="assets/howardd.jpeg" alt="howard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="howard">
+                    <img class="front-face" src="assets/howardd.jpeg" alt="howard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="sheldon">
+                    <img class="front-face" src="assets/sheldonn.jpeg" alt="sheldon">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="sheldon">
+                    <img class="front-face" src="assets/sheldonn.jpeg" alt="sheldon">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="leonard">
+                    <img class="front-face" src="assets/leonardd.jpeg" alt="leonard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="leonard">
+                    <img class="front-face" src="assets/leonardd.jpeg" alt="leonard">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="raj">
+                    <img class="front-face" src="assets/rajj.jpeg" alt="raj">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="raj">
+                    <img class="front-face" src="assets/rajj.jpeg" alt="raj">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="penny">
+                    <img class="front-face" src="assets/pennyy.jpeg" alt="penny">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="penny">
+                    <img class="front-face" src="assets/pennyy.jpeg" alt="penny">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="bernadatte">
+                    <img class="front-face" src="assets/bernadatte.jpg" alt="bernadatte">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="bernadatte">
+                    <img class="front-face" src="assets/bernadatte.jpg" alt="bernadatte">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="amy">
+                    <img class="front-face" src="assets/amy.webp" alt="amy">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="amy">
+                    <img class="front-face" src="assets/amy.webp" alt="amy">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="stuart">
+                    <img class="front-face" src="assets/stuart.webp" alt="stuart">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="stuart">
+                    <img class="front-face" src="assets/stuart.webp" alt="stuart">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="kripke">
+                    <img class="front-face" src="assets/kripke.webp" alt="kripke">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>
+                <div class="memory-card" data-framework="kripke">
+                    <img class="front-face" src="assets/kripke.webp" alt="kripke">
+                    <img class="back-face" src="assets/Bazzinga.jpg" alt="cover-pic">
+                </div>                
+            </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
